@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 写Sql语句   -->
+<mapper namespace="com.neusoft.dao.UserDao">
+<!-- 新添用户 -->
+    <insert id="addUser" parameterType="User">
+         insert into User(user_name,email,cellphone,password,salt,state,create_time)values(
+         #{user_name},#{email},#{cellphone},#{password},#{salt},#{state},#{create_time})
+    </insert>
+</mapper>

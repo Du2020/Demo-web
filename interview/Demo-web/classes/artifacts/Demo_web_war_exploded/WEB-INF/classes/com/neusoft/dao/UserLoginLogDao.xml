@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 写Sql语句   -->
+<mapper namespace="com.neusoft.dao.UserLoginLogDao">
+<!-- 登录记录 -->
+    <insert id="addUserLoginLog" parameterType="UserLoginLog">
+         insert into UserLoginLog(user_id,login_time,login_ip)values(
+         #{user_id},#{login_time},#{login_ip})
+    </insert>
+
+    <select id="findAllUserLoginLog"  resultType="UserLoginLog">
+           select * from UserLoginLog ;
+	</select>
+</mapper>
